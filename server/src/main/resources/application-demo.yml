@@ -1,10 +1,17 @@
 spring:
   datasource:
-    driver-class-name: org.h2.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:h2:file:./bin/h2/datart.demo;MODE=MySQL;DATABASE_TO_LOWER=TRUE;IGNORECASE=TRUE;CASE_INSENSITIVE_IDENTIFIERS=TRUE;IFEXISTS=TRUE
-    username:
-    password:
+    url: jdbc:mysql://localhost:3306/datart?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true
+    username: root
+    password: root123
+
+  mail:
+    host: smtphz.qiye.163.com
+    port: 465
+    username: wangkang@ruixi.cn
+    password: Hello125
+    protocol: smtps
 
 server:
   port: 8080
